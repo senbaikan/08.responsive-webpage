@@ -11,7 +11,7 @@ a {
 #main-header {
   display: flex;
   justify-content: space-around;
-  height: 5rem;
+  height: 5rem; /* rem use html default font size(16px) */
   align-items: center;
   background-color: rgb(29, 26, 24);
   padding: 0 5%;
@@ -45,6 +45,7 @@ a {
 }
 
 .menu-btn {
+  /* hamburger bar for side drawer */
   width: 3rem;
   height: 3rem;
   display: none;
@@ -61,14 +62,14 @@ a {
   width: 100%;
   height: 100%;
   background-color: rgb(29, 26, 27);
-  position: fixed;
+  position: fixed; /* cover whole page */
   top: 0;
   left: 0;
-  display: none;
+  display: none; /* hide until click btn*/
 }
 
 #side-drawer:target {
-  display: block;
+  display: block; /* show up when click btn */
 }
 
 #side-drawer header {
@@ -110,7 +111,7 @@ h1 {
 
 #latest-products ul {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* same line */
   gap: 1rem;
   margin: 0;
   padding: 0;
@@ -150,24 +151,26 @@ h2 {
 }
 
 @media (max-width: 48rem) {
-  h1, h2 {
+  /* media query for small size device */
+  h1,
+  h2 {
+    /* font size, 50% h1 , keep h2 */
     font-size: 1.5rem;
   }
-/* 
-  h2 {
-    font-size: 1.5rem;
-  } */
 
   #main-header nav {
+    /* hide nav */
     display: none;
   }
 
   .menu-btn {
+    /* hamburger btn shows up */
     display: flex;
     flex-direction: column;
   }
 
   #latest-products ul {
+    /* 2 rows */
     grid-template-columns: 100%;
   }
 }
